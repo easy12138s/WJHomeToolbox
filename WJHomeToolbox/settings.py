@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'WJHomeToolbox.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+        'NAME': 'tedu_note',  # 数据库名称
+        'HOST': '127.0.0.1',  # 数据库地址，本机 ip 地址 127.0.0.1
+        'PORT': 3306,  # 端口
+        'USER': 'root',  # 数据库用户名
+        'PASSWORD': 'root',  # 数据库密码
     }
 }
 
@@ -119,3 +123,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 设置session_key的键，默认为'sessionid'
+SESSION_COOKIE_NAME = 'sessionid'
+# 浏览器Cookie生效路径，默认为'/'，即127.0.0.1:8000
+SESSION_COOKIE_PATH = '/'
+# 设置浏览器生效域名
+SESSION_COOKIE_DOMAIN = None
+# 设置传输方式,False为HTTP，True为HTTPS
+SESSION_COOKIE_SECURE = False
+# 是指是否只能用HTTP传输
+SESSION_COOKIE_HTTPONLY = True
+# Cookie有效期，默认两周
+SESSION_COOKIE_AGE = 1209600
+# 是否关闭浏览器是的Cookie过期，默认False
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+# 每次发送后是否保存Cookie,默认False
+SESSION_SAVE_EVERY_REQUEST = False
