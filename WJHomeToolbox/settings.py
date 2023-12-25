@@ -31,15 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.admin',      		# 后台管理框架
+    'django.contrib.auth',				# 认证权限框架  需要结合django自带的auth_user表
+    'django.contrib.contenttypes',		# 内容类型框架
+    'django.contrib.sessions',			# 会话管理框架
+    'django.contrib.messages',			# 模板消息框架
+    'django.contrib.staticfiles',		# 静态文件框架
+    'corsheaders',
+    'rest_framework',
+    'users',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,7 +81,7 @@ WSGI_APPLICATION = 'WJHomeToolbox.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-        'NAME': 'tedu_note',  # 数据库名称
+        'NAME': 'WJ_HomeToolbox',  # 数据库名称
         'HOST': '127.0.0.1',  # 数据库地址，本机 ip 地址 127.0.0.1
         'PORT': 3306,  # 端口
         'USER': 'root',  # 数据库用户名
@@ -140,3 +144,7 @@ SESSION_COOKIE_AGE = 1209600
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 # 每次发送后是否保存Cookie,默认False
 SESSION_SAVE_EVERY_REQUEST = False
+
+# 支持跨域配置开始
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
