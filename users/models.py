@@ -11,3 +11,4 @@ class HomeUsers(models.Model):
     gender = models.CharField(max_length=12)  # 性别
     head_dic = models.CharField(max_length=255)  # 头像
     status = models.CharField(max_length=1) # 状态 1为启用 0为停用
+
