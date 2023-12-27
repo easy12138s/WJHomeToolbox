@@ -13,5 +13,5 @@ from users.models import HomeUsers
 
 class HomeUsersSerializers(serializers.ModelSerializer):
     class Meta:
-        model = HomeUsers
-        fields = '__all__'
+        model = HomeUsers   # 序列化模型
+        fields = ['name', 'account', 'gender']  # 序列化显示的字段
