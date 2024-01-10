@@ -1,7 +1,6 @@
 from django.apps import AppConfig
 
 
-class UsersConfig(AppConfig):
+class TestappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'users'
-    verbose_name = '用户模块'
+    name = 'apps.testapp'

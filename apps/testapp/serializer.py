@@ -8,10 +8,10 @@
     @time: 2023/12/25 10:28
 """
 from rest_framework import serializers
-from users.models import HomeUsers
+from .models import HomeUsers
 
 
 class HomeUsersSerializers(serializers.ModelSerializer):
     class Meta:
         model = HomeUsers   # 序列化模型
-        fields = ['name', 'account', 'gender']  # 序列化显示的字段
+        fields = '__all__' # 序列化显示的字段

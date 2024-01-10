@@ -1,6 +1,6 @@
-from users.models import HomeUsers
+from apps.users.models import HomeUsers
 from rest_framework import viewsets
-from users.serializer import HomeUsersSerializers
+from apps.users.serializer import HomeUsersSerializers
 
 # test
 class HomeUsersViewSet(viewsets.ModelViewSet):

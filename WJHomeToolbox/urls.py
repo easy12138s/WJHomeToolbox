@@ -19,5 +19,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    path('users/', include('users.urls')),  # 用户模块
+    path('users/', include('apps.users.urls')),  # 用户模块
+    path('test/', include('apps.testapp.urls')),
 ]

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',		# 静态文件框架
     'corsheaders',
     'rest_framework',
-    'users',
+    'apps.users',
+    'apps.testapp',
 ]
 
 MIDDLEWARE = [
