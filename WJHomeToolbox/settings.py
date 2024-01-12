@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',			# 会话管理框架
     'django.contrib.messages',			# 模板消息框架
     'django.contrib.staticfiles',		# 静态文件框架
+    'rest_framework.authtoken',         # token认证
     'corsheaders',
     'rest_framework',
     'apps.users',
@@ -127,6 +128,8 @@ LOGGING = {
         },
     }
 }
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
