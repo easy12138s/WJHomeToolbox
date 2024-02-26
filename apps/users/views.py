@@ -7,3 +7,5 @@ from apps.users.serializer import HomeUsersSerializers
 class HomeUsersViewSet(viewsets.ModelViewSet):
     queryset = HomeUsers.objects.all()
     serializer_class = HomeUsersSerializers
+
+

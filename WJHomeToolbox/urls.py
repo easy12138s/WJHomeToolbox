@@ -21,6 +21,6 @@ from rest_framework.authtoken import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     path('api-token-auth', views.obtain_auth_token),    # 获取token的接口
-    path('users/', include('apps.users.urls')),  # 用户模块
+    path('user/', include('apps.users.urls')),  # 用户模块
     path('test/', include('apps.testapp.urls')),   # 测试
 ]
