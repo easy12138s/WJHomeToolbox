@@ -15,3 +15,4 @@ class HomeUsersSerializers(serializers.ModelSerializer):
     class Meta:
         model = HomeUsers   # 序列化模型1
         fields = "__all__"  # 序列化显示的字段
+
